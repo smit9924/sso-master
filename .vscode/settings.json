@@ -1,0 +1,11 @@
+{
+    "npm.autoDetect": "off",
+    "typescript.tsc.autoDetect": "off",
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.displayEnglishDiagnostics": true,
+    "python.analysis.extraPaths": [
+        "/backend/services/auth/.venv/lib/python3.13/site-packages"
+    ]
+}

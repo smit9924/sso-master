@@ -1,0 +1,21 @@
+{
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "workspace",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+			"eamodio.gitlens",
+			"SanaAjani.taskrunnercode",
+			"christian-kohler.path-intellisense",
+			"ms-python.python",
+			"shardulm94.trailing-spaces",
+			"redhat.vscode-yaml"
+		]
+	  }
+	},
+	"forwardPorts": [
+	  80,
+	  443
+	]
+}

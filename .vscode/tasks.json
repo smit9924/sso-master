@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sso-client",
+            "type": "process",
+            "isBackground": true,
+            "command": "npm",
+            "args": ["run", "jit"],
+            "options": {
+                "cwd": "${workspaceFolder}/sso-client/client"
+            }
+        },
+        {
+            "label": "install depentencies",
+            "type": "process",
+            "isBackground": true,
+            "command": "bash",
+            "args": [
+                "-c",
+                "cd ${workspaceFolder}/backend/services/auth && uv sync && cd ${workspaceFolder}/frontend/clients/client && npm install"
+            ]
+        },
+        {
+            "label": "service : auth",
+            "type": "process",
+            "isBackground": true,
+            "command": "uv",
+            "args": [
+                "run",
+                "fastapi",
+                "dev",
+                "auth/main.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/backend/services/auth"
+            }
+        }
+    ]
+}
